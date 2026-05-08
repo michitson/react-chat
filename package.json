@@ -1,0 +1,12 @@
+{
+  "name": "chatbot-component-workspace",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "pnpm --filter vite-demo dev",
+    "dev:next": "pnpm --filter next-demo dev",
+    "build": "pnpm --filter @michitson/chatbot build",
+    "test": "pnpm --filter @michitson/chatbot test",
+    "typecheck": "pnpm -r --parallel typecheck"
+  }
+}
