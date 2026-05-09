@@ -65,7 +65,7 @@ These can come later as opt-in props or hooks; not worth designing for hypotheti
 
 1. ✅ Restructure into pnpm monorepo (vite-demo consuming workspace package)
 2. ✅ tsup build for the package (dual ESM/CJS, .d.ts, `'use client'` banner, `publishConfig`). Note: `treeshake: true` strips top-level directives via rollup post-processing, so we leave it off and rely on esbuild's tree-shaking.
-3. ⏳ Vitest + RTL test suite (10–15 tests covering streaming, abort, choices lifecycle, keyboard, disabled state)
+3. ✅ Vitest + RTL test suite — 15 tests covering: initial render, Send disabled/enabled state, submit clears input, streamed chunk accumulation, typing indicator, textarea disabled while streaming, Stop button visibility, abort + signal propagation + partial text preservation, Enter sends, Shift+Enter newline, choices visibility (post-stream only), choice click submission, previous-turn choice clearing.
 4. ⏳ apps/next-demo (Next 15 App Router) as RSC-boundary smoke test
 5. ⏳ Publish v0.0.1 to npm
 
