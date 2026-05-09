@@ -1,6 +1,6 @@
 {
   "name": "@michitson/react-chat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight, single-file React chat UI primitive — streaming, markdown, assistant-driven choices, AbortSignal. Bring your own backend.",
   "license": "MIT",
   "author": "michitson",
@@ -24,10 +24,15 @@
     "component"
   ],
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
   "files": [
     "dist",
@@ -44,17 +49,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "exports": {
-      ".": {
-        "types": "./dist/index.d.ts",
-        "import": "./dist/index.mjs",
-        "require": "./dist/index.cjs"
-      }
-    }
+    "access": "public"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
