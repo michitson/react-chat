@@ -1,6 +1,6 @@
 {
   "name": "@michitson/react-chat",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Lightweight, single-file React chat UI primitive — streaming, markdown, assistant-driven choices, AbortSignal. Bring your own backend.",
   "license": "MIT",
   "author": "michitson",
@@ -32,7 +32,8 @@
   "files": [
     "dist",
     "src",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "sideEffects": false,
   "scripts": {
