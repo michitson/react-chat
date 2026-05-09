@@ -64,7 +64,7 @@ These can come later as opt-in props or hooks; not worth designing for hypotheti
 ## Stage status (build-out plan)
 
 1. ✅ Restructure into pnpm monorepo (vite-demo consuming workspace package)
-2. ⏳ tsup build for the package (dual ESM/CJS, .d.ts, `'use client'` banner, `publishConfig`)
+2. ✅ tsup build for the package (dual ESM/CJS, .d.ts, `'use client'` banner, `publishConfig`). Note: `treeshake: true` strips top-level directives via rollup post-processing, so we leave it off and rely on esbuild's tree-shaking.
 3. ⏳ Vitest + RTL test suite (10–15 tests covering streaming, abort, choices lifecycle, keyboard, disabled state)
 4. ⏳ apps/next-demo (Next 15 App Router) as RSC-boundary smoke test
 5. ⏳ Publish v0.0.1 to npm
